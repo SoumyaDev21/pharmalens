@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PharmaLens — Clinical Intelligence & AI Prescription Scanner</title>
+  <meta name="description" content="PharmaLens is an AI-powered pharmaceutical intelligence Android application created by Soumya Dev Maity. Featuring ML Kit prescription OCR, openFDA adverse event monitoring, and real-time ClinicalTrials.gov search.">
+  
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Google-style Pill Header -->
+  <header class="header-container">
+    <nav class="google-nav-pill">
+      <a href="#hero" class="nav-brand">
+        <div class="brand-logo-mark">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+        </div>
+        <span class="brand-name">Pharma<span class="brand-accent">Lens</span></span>
+        <span class="google-dots">
+          <span class="dot dot-blue"></span>
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#demo" class="nav-link">Interactive Demo</a>
+        <a href="#creator" class="nav-link">Creator Profile</a>
+        <a href="#research" class="nav-link">Research & FDA</a>
+      </div>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="btn-icon" title="Toggle Theme" aria-label="Toggle Theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <a href="PharmaLens.apk" download class="btn btn-google-primary">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+          </svg>
+          <span>Get APK</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section (Google Product Style) -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <div class="google-pill-tag">
+        <span class="tag-badge">AI + Pharmacovigilance</span>
+        <span>Where Regulatory Science Meets Intelligent Vision</span>
+      </div>
+
+      <h1 class="hero-title">
+        The Intelligent Vision for <br>
+        <span class="gradient-text">Clinical & Drug Safety.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        <strong>PharmaLens</strong> transforms medical prescriptions and drug safety intelligence into real-time actionable insights. Powered by on-device Google ML Kit OCR, openFDA safety intelligence, and direct ClinicalTrials.gov access.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="PharmaLens.apk" download class="btn btn-google-download btn-lg">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+            <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9992.4482.9992.9993 0 .5511-.4482.9997-.9992.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.996-3.4572c.1576-.2731.0645-.6217-.2086-.7793-.2732-.1576-.6218-.0645-.7794.2086l-2.0287 3.5138C15.228 8.1633 13.6657 7.79 12 7.79c-1.6657 0-3.228.3733-4.8608 1.0276L5.1105 5.3038c-.1576-.2731-.5062-.3662-.7794-.2086-.2731.1576-.3662.5062-.2086.7793l1.996 3.4572C2.7126 11.2386.4 14.8872.4 19.1h23.2c0-4.2128-2.3126-7.8614-5.7185-9.7786"/>
+          </svg>
+          <div class="btn-text-block">
+            <span class="btn-small-text">Download Android App</span>
+            <span class="btn-main-text">PharmaLens APK (v1.0.2)</span>
+          </div>
+        </a>
+        <a href="#demo" class="btn btn-google-secondary btn-lg">
+          <span>Try Interactive Demo</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Quick Metrics Bar -->
+      <div class="quick-stats-row">
+        <div class="stat-pill">
+          <span class="stat-icon">⚡</span>
+          <span><strong>&lt; 200ms</strong> On-Device OCR</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-icon">🏛️</span>
+          <span><strong>openFDA</strong> FAERS Safety API</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-icon">🔬</span>
+          <span><strong>480,000+</strong> Clinical Studies</span>
+        </div>
+        <div class="stat-pill">
+          <span class="stat-icon">🔒</span>
+          <span><strong>100%</strong> Offline Privacy</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phone Preview Mockup -->
+    <div class="hero-visual">
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="screen-header">
+            <span class="screen-app-name">PharmaLens</span>
+            <span class="screen-pill-tag">v1.0.2</span>
+          </div>
+
+          <div class="screen-scanner-card">
+            <div class="scan-camera-view">
+              <div class="scan-laser"></div>
+              <div class="scan-corners">
+                <span class="corner tl"></span>
+                <span class="corner tr"></span>
+                <span class="corner bl"></span>
+                <span class="corner br"></span>
+              </div>
+              <div class="sample-rx-preview">
+                <p class="rx-doctor">Dr. A. Sen, MD • Oncology</p>
+                <p class="rx-med"><strong>Tab. Olaparib 150 mg</strong></p>
+                <p class="rx-sig">Sig: 2 tablets twice daily orally</p>
+                <p class="rx-icd">Ind: BRCA-mutated Ovarian / Breast CA</p>
+              </div>
+            </div>
+            <div class="scan-badge-detected">
+              <span class="badge-dot"></span>
+              <span>Matched: <strong>Olaparib (LYNPARZA)</strong> • PARP Inhibitor</span>
+            </div>
+          </div>
+
+          <div class="screen-safety-strip">
+            <div class="safety-indicator warning">
+              <span class="indicator-icon">⚠️</span>
+              <div class="indicator-text">
+                <span class="ind-title">FDA Boxed Warning Check</span>
+                <span class="ind-desc">MDS / AML Risk: Monitor CBC regularly</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="screen-nav-bottom">
+            <div class="nav-item active">📷 Scan</div>
+            <div class="nav-item">💊 Drugs</div>
+            <div class="nav-item">🔬 Trials</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features Grid (Google Material 3 Style) -->
+  <section id="features" class="section-container">
+    <div class="section-heading-centered">
+      <span class="section-badge">Capabilities</span>
+      <h2 class="section-title">Built with Regulatory Science & AI Precision</h2>
+      <p class="section-subtitle">
+        Designed from first principles to solve critical clinical challenges in medicine intake, adverse event tracking, and regulatory research.
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Card 1: Prescription Scanner -->
+      <div class="google-card">
+        <div class="card-icon-bubble bubble-blue">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+        </div>
+        <h3 class="card-title">Google ML Kit Prescription OCR</h3>
+        <p class="card-body">
+          State-of-the-art on-device optical character recognition scans doctor prescriptions, hospital discharge summaries, and pharmaceutical labels with zero cloud latency.
+        </p>
+        <ul class="feature-checklist">
+          <li>Detects drug name, dosage, frequency, and administration route</li>
+          <li>Handles cursive handwriting and structured doctor slips</li>
+          <li>100% on-device processing guarantees patient data privacy</li>
+        </ul>
+      </div>
+
+      <!-- Card 2: openFDA Intelligence -->
+      <div class="google-card">
+        <div class="card-icon-bubble bubble-green">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <h3 class="card-title">Real-Time openFDA Safety Engine</h3>
+        <p class="card-body">
+          Direct synchronization with the U.S. Food and Drug Administration API provides immediate access to authoritative adverse drug reactions and clinical monographs.
+        </p>
+        <ul class="feature-checklist">
+          <li>FAERS adverse reaction frequency & severity signals</li>
+          <li>Black-Box boxed warnings, contraindications & precautions</li>
+          <li>Drug-drug interaction cross-checks against concurrent regimens</li>
+        </ul>
+      </div>
+
+      <!-- Card 3: ClinicalTrials.gov Explorer -->
+      <div class="google-card">
+        <div class="card-icon-bubble bubble-yellow">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="m4.93 4.93 4.24 4.24"></path>
+            <path d="m14.83 9.17 4.24-4.24"></path>
+            <path d="m14.83 14.83 4.24 4.24"></path>
+            <path d="m9.17 14.83-4.24 4.24"></path>
+          </svg>
+        </div>
+        <h3 class="card-title">ClinicalTrials.gov Global Explorer</h3>
+        <p class="card-body">
+          Explore over 480,000 global clinical research protocols. Filter actively recruiting studies, oncology clinical trials, and study sponsor pipelines.
+        </p>
+        <ul class="feature-checklist">
+          <li>Investigate phase 1–4 clinical trial endpoints & enrollment</li>
+          <li>Track active trials for targeted therapies & biosimilars</li>
+          <li>Direct study IDs (NCT numbers), principal investigator contacts</li>
+        </ul>
+      </div>
+
+      <!-- Card 4: Pharmacovigilance Triage -->
+      <div class="google-card">
+        <div class="card-icon-bubble bubble-red">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </div>
+        <h3 class="card-title">Pharmacovigilance-Grade Architecture</h3>
+        <p class="card-body">
+          Grounded in GxP, GVP (Good Pharmacovigilance Practice), and global safety frameworks. Designed by an industry pharmacovigilance specialist.
+        </p>
+        <ul class="feature-checklist">
+          <li>MedDRA terminology compatible data mapping</li>
+          <li>ICSR (Individual Case Safety Report) causality alignment</li>
+          <li>Empowers both healthcare professionals and empowered patients</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Simulator (In-Browser Experience) -->
+  <section id="demo" class="section-container demo-section">
+    <div class="section-heading-centered">
+      <span class="section-badge">Live Interactive Simulator</span>
+      <h2 class="section-title">Experience the PharmaLens Engine</h2>
+      <p class="section-subtitle">
+        Click any clinical prescription sample below to watch the OCR scanner parse ingredients, evaluate FDA safety warnings, and fetch clinical trials in real time.
+      </p>
+    </div>
+
+    <!-- Sample Prescriptions Picker -->
+    <div class="sample-pills-bar">
+      <span class="picker-label">Select Sample:</span>
+      <button class="sample-chip active" data-sample="olaparib">
+        🧬 Olaparib (LYNPARZA) 150mg
+      </button>
+      <button class="sample-chip" data-sample="metformin">
+        💊 Metformin HCl 850mg
+      </button>
+      <button class="sample-chip" data-sample="amoxicillin">
+        🩺 Amoxicillin 500mg
+      </button>
+      <button class="sample-chip" data-sample="atorvastatin">
+        ❤️ Atorvastatin 20mg
+      </button>
+    </div>
+
+    <div class="demo-display-card">
+      <div class="demo-scanner-column">
+        <div class="demo-scanner-box">
+          <div class="demo-scanner-laser" id="demoLaser"></div>
+          <div class="demo-slip" id="demoSlip">
+            <!-- Dynamically populated by JS -->
+          </div>
+        </div>
+        <div class="demo-scanner-controls">
+          <button class="btn btn-google-primary btn-sm" id="btnRescan">
+            🔄 Re-Run ML Kit OCR Scan
+          </button>
+        </div>
+      </div>
+
+      <div class="demo-results-column">
+        <div class="results-header">
+          <div>
+            <span class="status-indicator-tag" id="demoStatusTag">● OCR Scan Complete (148ms)</span>
+            <h3 id="demoDrugName">Olaparib</h3>
+            <span class="demo-brand-subtitle" id="demoBrandSubtitle">Brand Name: LYNPARZA • PARP Inhibitor</span>
+          </div>
+          <span class="badge-fda-approved">FDA Approved</span>
+        </div>
+
+        <div class="results-tabs">
+          <button class="tab-btn active" data-tab="extracted">Parsed Rx Fields</button>
+          <button class="tab-btn" data-tab="fda">openFDA Safety Alerts</button>
+          <button class="tab-btn" data-tab="trials">Clinical Trials Match</button>
+        </div>
+
+        <div class="tab-content" id="tabContent">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Creator Section: Soumya Dev Maity -->
+  <section id="creator" class="section-container creator-section">
+    <div class="creator-card">
+      <div class="creator-header-grid">
+        <div class="creator-avatar-wrap">
+          <div class="creator-avatar-bubble">
+            <span class="avatar-initials">SDM</span>
+          </div>
+          <div class="verified-pill">
+            <span>✓ Verified Regulatory Scientist</span>
+          </div>
+        </div>
+
+        <div class="creator-bio">
+          <div class="google-pill-tag tag-blue">
+            <span>Author & Lead Architect</span>
+          </div>
+          <h2 class="creator-name">Soumya Dev Maity</h2>
+          <h3 class="creator-title">Pharmacovigilance & Regulatory Affairs Professional</h3>
+          <p class="creator-affiliation">
+            <span class="company-tag">IQVIA RDS India Pvt Ltd</span> • Kolkata, West Bengal, India
+          </p>
+
+          <p class="creator-summary">
+            Specialized Pharmacovigilance & Regulatory Affairs professional with extensive experience in end-to-end Individual Case Safety Report (ICSR) processing, Oracle Argus Safety, MedDRA coding, case triage, and medical narrative writing across spontaneous, clinical trial, and literature sources. Possesses thorough knowledge of global safety regulations (FDA, EMA, GVP, GCP, GxP) with a consistent record of maintaining high accuracy and strict adherence to regulatory submission timelines.
+          </p>
+
+          <!-- Contact / Social Links -->
+          <div class="creator-links-row">
+            <a href="https://linkedin.com/in/soumya-dev-maity-62bb831a3" target="_blank" rel="noopener noreferrer" class="social-pill linkedin">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span>LinkedIn Profile</span>
+            </a>
+            <a href="mailto:soumyadevmaity21@gmail.com" class="social-pill email">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 4.714v-9.428l4.623 4.714zm1.441 1.282l3.936 4.012 3.936-4.012 5.964 6.789h-19.8l5.964-6.789zm7.313-1.282l4.623-4.714v9.428l-4.623-4.714zm-7.377-2.647l-5.964-6.282h19.8l-5.964 6.282-3.936-3.718-3.936 3.718z"/>
+              </svg>
+              <span>soumyadevmaity21@gmail.com</span>
+            </a>
+            <span class="social-pill phone">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.5-1.1-.7-2.3-.7-3.5 0-.6-.4-1-1-1h-3.5c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z"/>
+              </svg>
+              <span>+91 8240014458</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Credentials & Experience Grid -->
+      <div class="credentials-grid">
+        <!-- Education -->
+        <div class="cred-col">
+          <div class="cred-heading">
+            <span class="cred-icon">🎓</span>
+            <h4>Education & Background</h4>
+          </div>
+
+          <div class="timeline-item">
+            <h5 class="timeline-degree">Master of Pharmacy (M. Pharm)</h5>
+            <p class="timeline-inst">Specialization in Regulatory Affairs</p>
+            <span class="timeline-period">Post-Graduate Degree (2021 – 2023)</span>
+          </div>
+
+          <div class="timeline-item">
+            <h5 class="timeline-degree">Bachelor of Pharmacy (B. Pharm)</h5>
+            <p class="timeline-inst">Pharmaceutical Sciences & Clinical Pharmacology</p>
+            <span class="timeline-period">Undergraduate Degree (2017 – 2021)</span>
+          </div>
+        </div>
+
+        <!-- Industry Experience -->
+        <div class="cred-col">
+          <div class="cred-heading">
+            <span class="cred-icon">💼</span>
+            <h4>Industry Experience</h4>
+          </div>
+
+          <div class="timeline-item">
+            <h5 class="timeline-role">Safety Associate / Associate Trainee</h5>
+            <p class="timeline-company">IQVIA RDS India Pvt Ltd • Kolkata</p>
+            <span class="timeline-period">12/2023 – Present</span>
+            <p class="timeline-desc">
+              End-to-end ICSR processing, Oracle Argus Safety triage, MedDRA dictionary coding of adverse events, and concise safety narrative authoring in strict compliance with global FDA and EMA regulations.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h5 class="timeline-role">Clinical Research Intern</h5>
+            <p class="timeline-company">Clinimed Lifesciences Pvt. Ltd • Kolkata</p>
+            <span class="timeline-period">09/2022 – 12/2022</span>
+            <p class="timeline-desc">
+              Trial Master File (TMF) documentation, clinical trial compliance metrics tracking, and GCP protocol alignment.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h5 class="timeline-role">Industrial Trainee</h5>
+            <p class="timeline-company">Albert David Limited • Kolkata</p>
+            <span class="timeline-period">01/2020 – 02/2020</span>
+            <p class="timeline-desc">
+              Commercial-scale pharmaceutical manufacturing and GMP QA/QC protocols.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research & FDA Certifications -->
+  <section id="research" class="section-container">
+    <div class="section-heading-centered">
+      <span class="section-badge">Scientific Foundations</span>
+      <h2 class="section-title">Research Projects & U.S. FDA Certifications</h2>
+      <p class="section-subtitle">
+        Rigorous scientific background underpinning PharmaLens's clinical models.
+      </p>
+    </div>
+
+    <div class="research-cert-grid">
+      <!-- Dissertation -->
+      <div class="research-card highlighted">
+        <div class="research-tag">M. Pharm Dissertation Project</div>
+        <h3 class="research-title">
+          Comparative Regulatory Study of Generic Olaparib with FDA Approved LYNPARZA in Breast Cancer Patients
+        </h3>
+        <p class="research-desc">
+          Comprehensive evaluation of the regulatory pathways, bioequivalence parameters, and clinical safety profiles comparing generic Olaparib against reference-listed LYNPARZA (AstraZeneca) under US FDA 505(j) frameworks.
+        </p>
+        <div class="tag-row">
+          <span class="micro-tag">PARP Inhibitor</span>
+          <span class="micro-tag">BRCA Mutation</span>
+          <span class="micro-tag">FDA 505(j)</span>
+          <span class="micro-tag">Bioequivalence</span>
+        </div>
+      </div>
+
+      <!-- Research Review -->
+      <div class="research-card">
+        <div class="research-tag">Published Research Review</div>
+        <h3 class="research-title">
+          Potential of Herbal Diuretics in Therapeutics
+        </h3>
+        <p class="research-desc">
+          Systematic pharmacology review investigating active botanical phytoconstituents as natural diuretic therapies with renal safety profiles.
+        </p>
+        <div class="tag-row">
+          <span class="micro-tag">Phytopharmacology</span>
+          <span class="micro-tag">Renal Therapeutics</span>
+          <span class="micro-tag">Herbal Monographs</span>
+        </div>
+      </div>
+
+      <!-- FDA Certifications -->
+      <div class="research-card">
+        <div class="research-tag">U.S. Food & Drug Administration (FDA)</div>
+        <h3 class="research-title">Professional Certifications</h3>
+        <ul class="fda-cert-list">
+          <li>
+            <span class="fda-icon">🏛️</span>
+            <div>
+              <strong>Quality Management Maturity (QMM) Workshop</strong>
+              <span class="fda-issuer">U.S. FDA CDER</span>
+            </div>
+          </li>
+          <li>
+            <span class="fda-icon">🏛️</span>
+            <div>
+              <strong>Introduction to Pharmacovigilance Frameworks</strong>
+              <span class="fda-issuer">U.S. FDA Regulatory Education</span>
+            </div>
+          </li>
+          <li>
+            <span class="fda-icon">🏛️</span>
+            <div>
+              <strong>Antimicrobial Resistance — Theory and Methods</strong>
+              <span class="fda-issuer">U.S. FDA Clinical Safety Training</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Leadership -->
+      <div class="research-card">
+        <div class="research-tag">Community & Leadership</div>
+        <h3 class="research-title">Rotaract Club of East Calcutta Township</h3>
+        <p class="research-desc">
+          <strong>Former President (12/2020 – 12/2021)</strong><br>
+          Spearheaded operational healthcare initiatives, free medicine distribution camps, blood donation drives, and led multi-disciplinary volunteering teams across West Bengal.
+        </p>
+        <div class="tag-row">
+          <span class="micro-tag">Healthcare Leadership</span>
+          <span class="micro-tag">Community Camps</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download & APK CTA Section -->
+  <section class="download-banner-section">
+    <div class="download-banner-card">
+      <div class="banner-content">
+        <span class="google-pill-tag tag-white">Ready for Android</span>
+        <h2 class="banner-title">Download PharmaLens v1.0.2</h2>
+        <p class="banner-desc">
+          Install the complete application directly on your Android phone. Experience on-device prescription OCR, adverse event intelligence, and clinical trials search.
+        </p>
+        <div class="banner-buttons">
+          <a href="PharmaLens.apk" download class="btn btn-white-primary btn-lg">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            </svg>
+            <span>Download PharmaLens.apk (19.6 MB)</span>
+          </a>
+        </div>
+        <p class="banner-footnote">
+          Requires Android 7.0+ (Nougat through Android 15 & 16). 100% Free & Private.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google-style Footer -->
+  <footer class="google-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-name">Pharma<span class="brand-accent">Lens</span></span>
+          <span class="google-dots">
+            <span class="dot dot-blue"></span>
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </span>
+          <p class="footer-tagline">AI-Powered Pharmaceutical Vision & Pharmacovigilance Intelligence</p>
+        </div>
+        <div class="footer-creator-credit">
+          <p>Created by <strong>Soumya Dev Maity</strong></p>
+          <p class="footer-sub">M. Pharm (Regulatory Affairs) • Safety Associate at IQVIA RDS</p>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="disclaimer">
+          <strong>Regulatory & Medical Disclaimer:</strong> PharmaLens is an investigational and educational software tool designed for clinical intelligence and pharmacovigilance screening. It is not intended to substitute for professional clinical judgment, diagnosis, or prescription validation by a licensed healthcare practitioner.
+        </p>
+        <p class="copyright">
+          © 2026 PharmaLens by Soumya Dev Maity. All rights reserved. Built with Google Material Design 3 and Google Fonts.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
